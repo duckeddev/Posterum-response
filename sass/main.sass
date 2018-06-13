@@ -1,0 +1,366 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "reset"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+  background-color: #f7f9ff
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+  margin: 0 auto
+  box-sizing: border-box
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+section
+  position: relative
+  width: 100%
+
+.btn
+  background-color: $accent
+  border: 4px solid $accent
+  font-family: "montserratBlack", sans-serif
+  color: $white
+  font-size: 1rem
+  padding: 1rem
+  text-transform: uppercase
+  cursor: pointer
+  border-radius: 5px
+  transition: all 1s ease
+  &:hover
+    background-color: transparent    
+    text-decoration: none
+    color: $accent
+
+.title
+  text-decoration: underline
+  text-decoration-color: $accent
+  font-family: "montserratBold", sans-serif
+  font-size: 40px
+  line-height: 40px
+
+.descr
+  font-family: "montserratRegular", sans-serif
+  font-size: 1rem
+
+/*--- Section header styles ---*/
+
+.header
+  background-image: url(../img/bg-header.jpg)
+  background-repeat: no-repeat
+  background-color: #fff
+  background-position: center -2rem
+  background-size: cover
+  height: 100vh
+  position: relative
+  &__menu-toggle
+    position: absolute
+    top: 1.5em
+    right: .5em
+    cursor: pointer
+    display: none
+    &-hamburger,
+    &-hamburger::before,
+    &-hamburger::after
+      content: ''
+      display: block
+      background: $accent
+      height: 3px
+      width: 2em
+      border-radius: 3px
+      transition: all ease-in-out 350ms
+    &-hamburger
+      &::before
+        transform: translateY(-7px)
+      &::after
+        transform: translateY(4px)
+  &__head
+    display: flex
+    justify-content: space-between
+    height: 40px
+    line-height: 40px
+    position: relative
+    z-index: 1
+    top: 1rem 
+    font-family: "montserratMedium", sans-serif
+    font-size: .9rem
+    color: $text
+    &-logo
+      position: relative
+    &-nav
+      position: relative
+      display: flex
+      left: 10rem
+      &-list
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
+        list-style: none
+        &-dropdown
+          &-link
+            padding: 0 2rem
+        &-icon
+          display: none
+        &-item
+        &-link
+          font-family: "montserratMedium", sans-serif
+          font-size: .9rem
+          white-space: nowrap
+          color: $text
+          transition: all .8s ease
+          &:hover
+            text-decoration: none
+            color: $accent
+    &-lang
+      position: relative
+      display: flex
+      &-btn
+        background-color: transparent
+        border: none
+        border-radius: 10px
+        transition: all .8s ease
+        &:hover
+          background-color: $accent
+          color: $white
+          cursor: pointer
+  &__banner
+    width: 50%
+    margin-top: 12rem
+    &-title
+      margin-bottom: 2rem
+    &-descr
+      margin-bottom: 3rem
+      font-family: "montserratSemiBold", sans-serif
+    &-btn
+      background-color: transparent
+      color: $accent
+      transition: all 2s ease
+      &:hover
+        background-color: $accent
+        color: $white
+  &__text
+    position: absolute
+    left: -13rem
+    margin-top: 21rem
+    transform: rotate(-90deg)  
+    font-family: "montserratRegular", sans-serif
+    font-size: 1rem
+    border-bottom: 1px solid $accent
+  &__rectnagle
+    width: 140px
+    height: 140px
+    background-color: $accent
+    border-radius: 50%
+    position: absolute
+    right: 170px
+    top: 40%
+    cursor: pointer
+    transition: all 2s ease
+    &:hover
+      background-color: rgba(255, 0, 0, .6)
+  &__content-wrap
+    display: flex
+    position: relative
+  &__content
+    &-social
+      position: absolute
+      bottom: -1.8em
+      right: -1rem
+      &-link
+        margin-right: 2rem
+        font-size: 2rem
+        color: $gray
+        transition: all 1s ease
+        &:hover
+          color: $accent
+      &-list
+        display: flex
+        list-style: none
+
+/*--- Section about us styles ---*/
+
+.about-us
+  background-image: url(../img/bg-about-us.png)
+  background-repeat: no-repeat
+  background-position: center -10rem
+  background-size: cover
+  padding: 5rem 0
+  height: 100vh
+  &-wrap
+    width: 50%
+    margin-top: 5rem
+  &-title
+    &-sub
+      font-family: "montserratBold", sans-serif
+      font-size: 20px
+      margin-top: -10px
+  &-descr
+    padding: 2rem 0
+    font-family: "montserratSemiBold", sans-serif
+
+/*--- Section what we do ---*/
+
+.what-we-do
+  background-image: url(../img/bg-what-do.png)
+  background-repeat: no-repeat
+  background-position: center -9em
+  background-size: cover
+  height: 100vh
+  padding: 5rem 0
+  &-title
+    margin-bottom: 40px
+  &-list
+    display: inline-block
+    list-style: none
+  &-item
+    display: inline-block
+    margin-bottom: 1rem
+    margin-right: 4.8rem
+    transition: all .1s ease
+    &-link
+      font-family: "montserratExtraBold", sans-serif
+      color: $text
+      font-size: 18px
+      white-space: nowrap
+      cursor: pointer
+      text-decoration: underline
+      transition: all 1s ease
+      &:hover,
+      &:active
+        color: $accent
+        text-decoration: none
+  &-descr
+    width: 60%
+    font-family: "montserratSemiBold", sans-serif
+    font-size: 20px
+    margin: 40px 0 70px 0
+    &_strong
+      font-family: "montserratBlack", sans-serif
+
+/*--- Section portfolio style ---*/
+
+.portfolio
+  background-color: $black
+  background-image: url('../img/portfolio-bg.png')
+  background-repeat: no-repeat
+  background-size: cover
+  padding: 5rem 0
+  text-align: center
+  color: $white
+  &__top-wrap
+    margin-bottom: 4rem
+    text-align: left
+  &__rotate-text
+    position: absolute
+    left: -14rem
+    top: 17rem
+    transform: rotate(-90deg)  
+    font-family: "montserratBlack", sans-serif
+    font-size: 31px
+  &-first-title
+    margin-bottom: 50px
+    &-descr
+      font-family: "montserratRegular", sans-serif
+      font-size: 1rem
+      &-underline
+        margin-top: 5px
+        height: 2px
+        width: 100px
+        border-radius: 3px
+        background-color: $accent
+        margin-bottom: 90px
+  &-text
+    &-item
+      line-height: 20px
+      font-family: "montserratRegular", sans-serif
+      font-size: 20px
+      &-title
+        font-size: 16px
+      &_color
+        color: $accent
+        font-family: "montserratBlack", sans-serif
+  &__bottom
+    &-wrap
+      padding: 2rem 0
+    &-title
+      margin-bottom: 2rem
+    &-list
+      &-top
+        display: flex
+        justify-content: space-around
+      &-bottom        
+        display: flex
+        justify-content: space-around
+        margin-bottom: 2rem
+      &-item
+        margin: 1rem 0
+        width: 300px
+        height: 200px
+        background-color: #fff
+  &__button
+    padding: 15px 30px
+
+/*--- Section contact styles ---*/
+
+.contact
+  background-image: url('../img/contact-bg.png')
+  background-repeat: no-repeat
+  background-size: cover
+  height: 100vh
+  padding: 5rem 0
+  &__title
+    &-descr
+      margin-top: 10px
+      font-family: serif
+      font-family: "montserratBold", sans-serif
+      font-size: 23px
+      margin-bottom: 100px
+  &__form
+    display: flex
+    flex-direction: column
+    &-input
+      font-family: "montserratBold", sans-serif
+      font-size: 22px
+      width: 50%      
+      color: $black
+      margin-bottom: 20px
+      background-color: transparent
+      border: none
+      border-bottom: 2px solid $accent
+      padding: 0 0 0 15px
+  &__button
+    margin-top: 60px
+  
+
+@import "media" // Always at the end

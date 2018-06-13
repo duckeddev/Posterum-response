@@ -1,0 +1,166 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+  
+// ≥768px
++media-breakpoint-only(sm)
+  .header
+    height: 85vh
+    &__menu
+      &-toggle
+        display: block
+    &__head
+      &-nav
+        &-list
+          &-link
+            display: none
+      &-lang
+        display: none
+    &__text
+        display: none
+    &__banner
+      margin-top: 3rem
+      &-title
+        font-size: 2rem
+        line-height: 30px
+        
+  .about-us
+    padding: 0
+    height: 80vh
+    background-position: center -5rem
+
+    .what-we-do
+      background-position: center 0em
+      padding: 2rem 0
+      &-title
+        margin-bottom: 2rem
+      &-descr
+        margin: 1rem 0 3rem 0
+
+    .portfolio
+      padding: 2rem 0
+      &__rotate-text
+        display: none
+
+    .contact
+      padding: 2rem 0
+      &__title
+        &-descr
+          margin-bottom: 3rem
+
+// ≥576px
++media-breakpoint-only(xs)
+  .header
+    &__menu
+      &-toggle
+        display: block
+    &__head
+      &-nav
+        &-list
+          &-link
+            display: none
+      &-lang
+        display: none
+    &__text
+      display: none
+    &__banner
+      width: 90%
+      margin-top: 4rem
+      margin-left: .8rem
+      &-title
+        font-size: 1.5rem
+        line-height: 20px
+        margin-top: -2rem
+      &-descr
+        font-size: .8rem
+      &-btn
+        font-size: .8rem
+    &__rectnagle
+      display: none
+    &__content
+      &-social
+        &-list
+          position: relative
+          bottom: -5rem
+          left: -5rem
+  .about-us
+    background-position: center -9rem
+    padding: 0
+    height: 102vh
+    &-wrap
+      width: 90%
+      margin-top: 0
+      margin-left: .8rem
+    &-title
+      font-size: 1.5rem
+    &-descr
+      padding: 1rem 0
+      font-size: .8rem
+    &__btn
+      font-size: 1rem
+  .what-we-do
+    padding: 0 1rem
+    background-position: center 0em 
+    &-title
+      margin-top: -10rem
+      font-size: 1.5rem
+    &-descr
+      width: 100%
+      margin-top: 0rem
+      font-size: .9rem
+    &-item
+      &-link
+        font-size: 1rem
+    &-list
+      margin-top: -1rem
+    &__btn
+      margin-top: -2rem
+      font-size: .7rem
+
+  .portfolio
+    padding: 2rem 1rem
+    &__rotate
+      &-text
+        display: none
+    &__top
+    &-first
+      &-title
+        &-descr
+          &-underline
+            margin-bottom: 2rem
+    &__bottom
+      &-wrap
+  
+  .contact
+    padding: 2rem 1rem 
+    &__title
+      font-size: 1.6rem
+      line-height: 30px
+      &-descr
+        font-size: 1.2rem
+    &__form
+      margin-top: -3rem
+      &-input
+        width: 90%
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+  
+
+// ≤768px
++media-breakpoint-up(md)
+  
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

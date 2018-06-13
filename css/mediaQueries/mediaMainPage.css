@@ -1,0 +1,92 @@
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) { 
+    
+.header {
+    height: 85vh;
+}
+
+.header__menu-toggle {
+    display: block;
+}
+
+.header__rectnagle {
+    top: 25%;
+    right: 10%;
+}
+
+.header__head-nav {
+    display: none;
+}
+
+.header__head-lang {
+    display: none;
+}
+
+.header__text {
+    display: none;
+}
+
+.header__banner {
+    margin-top: 3rem;
+}
+
+.header__banner-title {
+    font-size: 2rem;
+    line-height: 30px;
+}
+
+.about-us {
+    padding: 0;
+    height: 80vh;
+    background-position: center -5rem;
+}
+
+.what-we-do {
+    background-position: center 0em;
+    padding: 2rem 0;
+}
+
+.what-we-do-title {
+    margin-bottom: 2rem;
+}
+
+.what-we-do-descr {
+    margin: 1rem 0 3rem 0;
+}
+
+.portfolio {
+    padding: 2rem 0;
+}
+
+.portfolio__rotate-text {
+    display: none;
+}
+
+.contact {
+    padding: 2rem 0;
+}
+
+.contact__title-descr {
+    margin-bottom: 3rem;
+}
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+}

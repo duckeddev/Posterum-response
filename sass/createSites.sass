@@ -1,0 +1,335 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "reset"
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+  background-color: #f7f9ff
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+  margin: 0 auto
+  box-sizing: border-box
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+section
+  position: relative
+  width: 100%
+
+.btn
+  background-color: $accent
+  border: 4px solid $accent
+  font-family: "montserratBlack", sans-serif
+  font-size: 1rem
+  padding: 1rem
+  text-transform: uppercase
+  cursor: pointer
+  border-radius: 5px
+  transition: all 1s ease
+  &:hover
+    background-color: transparent    
+    text-decoration: none
+    color: $accent
+
+.title
+  text-decoration: underline
+  text-decoration-color: $accent
+  font-family: "montserratBold", sans-serif
+  font-size: 40px
+  line-height: 40px
+
+.descr
+  font-family: "montserratRegular", sans-serif
+  font-size: 1rem
+
+/*--- Section header styles ---*/
+
+.header
+  background-image: url('../img/create-sites-page/header-bg.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  height: 100vh
+  background-position: center -10rem
+  &-nav
+    display: flex
+    position: relative
+    top: 1rem
+    justify-content: space-between
+    align-items: center
+    &-bar
+      display: none
+  &-banner
+    margin-top: 15%
+    transform: translateY(-25%)
+    &-title
+      &-text
+        padding-left: .5rem
+        margin-bottom: 1rem
+        font-family: "montserratBlack", sans-serif
+        font-size: 2.1rem
+        line-height: 2rem
+        color: $white
+        background-color: $accent
+    &-descr
+      &-text
+        font-family: "montserratBlack", sans-serif
+        font-size: 1.2rem
+    &-btn
+      &-link
+        background-color: $accent
+        color: $white
+        margin-top: 3rem
+        &:hover,
+        &:active
+          background-color: transparent
+          color: $accent
+    &-rotate
+      &-text
+        transform: rotate(-90deg)
+        position: absolute
+        left: -11rem
+        top: 4rem
+        border-bottom: 1px solid $accent
+
+.nav
+  display: flex
+  &-navbar
+    &-toggler
+  &-link
+    font-family: "montserratMedium", sans-serif
+    font-size: .9rem
+    color: $black
+    white-space: nowrap
+    transition: all 1s ease
+    &:hover
+      color: $accent
+      text-decoration: none
+  &__lang
+    margin-left: 1rem
+    &-btn
+      margin-left: .9rem
+      background-color: transparent
+      border: none
+      &:first-child
+        margin-left: 2rem
+      &:hover
+        cursor: pointer
+        background-color: $accent
+        color: $white
+        border-radius: 10px
+
+/*--- Section features styles ---*/
+
+.features
+  padding: 5rem 0 40rem 0
+  background-image: url('../img/create-sites-page/features-bg.jpg')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: center 24rem
+  &-list
+  &-title
+    margin-bottom: 5rem
+  &-items
+    &-row
+      display: flex
+  &-item
+    &-title
+      &-block
+        display: flex
+        margin-bottom: 1rem
+        align-items: center
+        &-icon
+          margin-right: 1rem
+        &-text
+          font-family: "montserratSemiBold", sans-serif
+          font-size: 20px
+      &-descr
+        font-family: "montserratMedium", sans-serif
+        font-size: 14px
+
+/*--- Section stage-develop styles ---*/
+
+.stage-develop
+  padding: 5rem 0
+  position: relative
+  &-title
+    margin-bottom: 5rem
+  &-stages
+    position: relative
+    display: flex
+    flex-direction: column
+    &-item
+      display: flex
+      align-items: center
+      padding: 0 1rem
+      box-shadow: 0px 1px 30px 0px rgba(50, 50, 50, 0.75)
+      background-color: #eee
+      border-radius: 10px
+      margin-bottom: 5rem
+      &-num
+        font-family: "montserratBold", sans-serif
+        font-size: 80px
+        margin-right: 2rem
+        color: $accent
+      &-title
+        font-family: "montserratSemiBold", sans-serif
+        font-size: 20px
+      &-row
+        display: flex
+        position: relative
+        justify-content: space-around
+        align-content: center
+        &-middle
+          flex-direction: row-reverse
+      &-first
+        &-line
+          position: absolute
+          z-index: -1
+          top: 25%
+      &-second
+        &-line
+          position: absolute
+          right: 25%
+          top: 50%
+          z-index: -3
+      &-third
+        &-line
+          position: absolute
+          z-index: -1
+          top: 25%
+      &-four
+        &-line
+          position: absolute
+          top: 50%
+          left: 25%
+          z-index: -1
+      &-five
+        &-line
+  &-img
+    &-mac
+      position: relative
+      top: -1rem
+      right: -3rem
+  &-btn
+    margin-top: 2rem
+    &-link
+      color: $white
+
+/*--- Section price styles ---*/
+
+.price
+  padding: 5rem 0
+  background-image: url('../img/create-sites-page/price-bg.jpg')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: center 14rem
+  &-title
+    margin-bottom: 5rem
+  &-list
+    margin-left: -1.5rem
+    display: flex
+    &-item
+      margin-right: 1rem
+      color: $black
+      padding: 25px
+      background-color: $white
+      box-shadow: 0px 1px 30px 0px rgba(50, 50, 50, 0.75)
+      text-align: center
+      &-title
+        font-family: "montserratSemiBold", sans-serif
+        font-size: 22px
+        white-space: nowrap
+        &-descr
+          font-family: "montserratSemiBold", sans-serif
+          font-size: 16px
+          color: $accent
+          &-first
+            font-family: "montserratSemiBold", sans-serif
+            font-size: 16px
+          &-num
+            font-size: 40px
+      &-list
+        text-align: left  
+        &-item
+          font-family: "montserratLight", sans-serif
+          font-size: 14px
+      &-btn
+        padding: 1rem 3rem
+        color: $white
+        &-first
+          background-color: $white
+          color: $accent
+          border: 3px solid $accent
+          border-radius: 10px
+          padding: 1rem 3rem
+          &:hover
+            background-color: $accent
+            border: 3px solid $white
+            color: $white
+    &-item:first-child
+      background-color: $accent
+      color: $white
+      
+/*--- Section contact styles ---*/
+
+.contact
+  background-image: url('../img/contact-bg.png')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  padding: 5rem 0
+  &-wrap
+    display: flex
+    flex-direction: column
+  &-title
+    font-size: 28px
+    &-descr
+      font-family: "montserratBold", sans-serif
+      font-size: 23px
+      margin-bottom: 10rem
+  &__form
+    display: flex
+    flex-direction: column
+    &-input
+      font-family: "montserratBold", sans-serif
+      font-size: 22px     
+      color: $black
+      margin-bottom: 20px
+      background-color: transparent
+      border: none
+      border-bottom: 3px solid $accent
+      padding: 0 0 0 15px
+  &__button
+    margin-top: 4rem
+    color: $white
+
+
+
+
+
+  
+  
+@import "mediaCreateSites" // Always at the end

@@ -1,0 +1,211 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+  .header
+    height: 100vh
+    
+    &__menu
+      &-toggle
+        display: block
+        position: absolute
+        right: 1rem
+        top: .6rem
+    &__head
+      &-nav
+        &-list
+          &-link
+            display: none
+      &-lang
+        display: none
+    &-banner
+      margin-top: 35%
+      &-title
+        &-text
+          font-size: 1.2rem
+      &-descr
+        &-text
+          font-size: 1rem
+      &-btn
+        margin-top: 0
+
+  .features
+    &-title
+      &-text
+        font-size: 1.5rem
+
+  .stage-work
+    &-list
+      margin-left: -3.8rem      
+  .nav
+    display: none
+  .price
+    &-list
+      position: relative
+      display: flex
+      justify-content: center
+      margin: 0 auto
+      &-prev
+        display: block
+        position: absolute
+        left: 2rem
+        top: 50%
+        transform: translateY(-50%)
+        color: $accent
+        font-size: 3rem
+        cursor: pointer
+      &-next
+        display: block
+        position: absolute
+        right: 2rem
+        top: 50%
+        transform: translateY(-50%)
+        color: $accent
+        font-size: 3rem
+        cursor: pointer
+      &-item
+        display: none
+        &-active
+          display: block
+
+// ≥768px
++media-breakpoint-down(sm)
+  .header
+    height: 60vh
+    &-banner
+      &-title
+        &-text
+          font-size: 1.2rem
+    &-nav
+      &-bar
+        display: block
+        position: absolute
+        right: 0
+        top: -.5rem
+
+  .stage-work
+    &-list
+      margin-left: -3.8rem        
+
+  .nav
+    visibility: hidden
+
+  .price
+    &-list
+      &-item
+        display: none
+
+// ≥576px
++media-breakpoint-down(xs)
+  .header
+    height: 60vh
+    &-banner
+      &-title
+        &-text
+          font-size: 1.2rem
+    &-nav
+      &-bar
+        display: block
+        position: absolute
+        right: 0
+        top: -.5rem
+
+  .nav
+    visibility: hidden
+  
+  .features
+    padding: 2rem 0
+    background-position: left -5rem
+    &-list
+      margin-bottom: 1rem
+      &-item
+        &-title
+          font-size: 1rem
+          &-descr
+            font-size: .8rem
+        &-icon
+          display: none
+    &-title
+      &-text
+        font-size: 1.5rem
+
+  .promotion
+    padding: 0
+    height: 90vh
+    &-banner
+      &-title
+        font-size: 1.5rem
+  
+  .request
+    &__banner
+      &-title
+        font-size: 1.3rem
+      &-descr
+        font-size: .7rem
+    &__btn
+      &-link
+        font-size: .85rem
+
+  .stage-work
+    height: 250vh
+    &-title
+      margin-bottom: 0rem
+      &-text
+        font-size: 2rem 
+    &-list
+      margin: 0
+      padding: 0
+      display: flex
+      flex-wrap: wrap
+      &-item
+        margin: 0
+        margin: 2rem
+  
+  .tasks
+    &-title
+      font-size: 1.6rem
+    &-button
+      &-link
+        font-size: .6rem
+  
+  .price
+    &-title
+      font-size: 2rem
+    &-list
+      flex-direction: column
+      &-item
+       margin: 1rem 0rem 1rem 3rem
+
+  .contact
+    padding: 2rem 0
+    &-title
+      font-size: 1.3rem
+      &-descr
+        font-size: 1rem
+        margin-bottom: 4rem
+    &__button
+      font-size: 1rem
+      width: 85%
+      margin: 2rem auto
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
